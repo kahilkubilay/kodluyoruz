@@ -1,5 +1,5 @@
 # Kodluyoruz
-kodluyoruz projelerinin saklandığı repo 
+kodluyoruz projelerinin bulunduğu repo 
 
 ## projelerin live versiyonları:: 
 
