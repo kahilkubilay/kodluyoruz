@@ -1,0 +1,231 @@
+/*
+    CSS structure:: 
+
+    1. header
+        1.1 application button
+        1.2 pp image
+    2. content
+    3. footer
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**************************************************** 1. header ****************************************************/
+header {
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    /* border: 3px solid black; */
+    padding: 6px;
+}
+
+header ul {
+    display: flex;
+    flex: 0 0 auto;
+    /* padding: 0 12px; */
+    float: right;
+    padding-right: 16px;
+}
+
+header ul li {
+    display: inline-block;
+    line-height: 32px;
+    vertical-align: center;
+    padding: 4px 0 0 15px;
+}
+
+header ul li a {
+    font-family: 'Roboto', sans-serif;
+    font: 13px/27px Roboto, RobotoDraft, Arial, sans-serif;
+    line-height: 24px;
+    text-decoration: none;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+header ul li:nth-child(2) {
+    margin-right: 8px;
+}
+
+/********************************************* 1.1 application button *********************************************/
+
+div.point-block {
+    line-height: 5px;
+    /* margin-top: 5px; */
+}
+
+div.point-block:first-child {
+    margin-top: 5px;
+}
+
+div.point-block span {
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 50%;
+}
+
+/********************************************* 1.1 application button *********************************************/
+
+/************************************************ 1.2 pp image ************************************************/
+
+header a img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/************************************************ 1.2 pp image ************************************************/
+
+/**************************************************** 1.header ****************************************************/
+
+.content {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.content .image-capsule img {
+    width: 408px;
+    margin-bottom: 48px;
+}
+
+.input-box {
+    display: block;
+}
+
+.input-box .fa-search,
+.input-box .fa-microphone {
+    position: relative;
+    /* top: 2px; */
+    font-size: 16px;
+    color: #9aa0a6;
+}
+
+.input-box .fa-search {
+    left: 35px;
+}
+
+.input-box .fa-microphone {
+    left: -35px;
+}
+
+#search {
+    width: 600px;
+    height: 46px;
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+    color: rgba(0, 0, 0, .87);
+    border: 1px solid #dfe1e5;
+    margin: 0 auto;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    padding: 20px 20px 20px 45px;
+}
+
+#search:hover,
+#search:focus {
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+
+.button-capsule {
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.button-capsule button {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 0 16px;
+    background-color: #f8f9fa;
+    min-width: 54px;
+    height: 34px;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
+    border-radius: 4px;
+}
+
+.button-capsule button:last-child {
+    margin-left: 40px;
+}
+
+.button-capsule button:hover {
+    cursor: pointer;
+    border: 1px solid #dadce0;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+}
+
+.info-capsule {
+    margin-top: 40px;
+}
+
+.info-capsule span {
+    color: #3c4043;
+}
+
+.info-capsule span,
+.info-capsule a {
+    line-height: 28px;
+    font-family: Arial, sans-serif;
+    font-size: small;
+    text-decoration: none;
+}
+
+.info-capsule a:hover {
+    text-decoration: underline;
+}
+
+/**************************************************** 2. content ****************************************************/
+
+/**************************************************** 2. footer ****************************************************/
+footer {
+    position: relative;
+    top: 288px;
+    background-color: #f2f2f2;
+}
+
+footer .location {
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #dadce0;
+    padding: 15px 30px;
+}
+
+footer .sub-navigation {
+    padding: 15px 30px;
+}
+
+footer ul {
+    display: inline;
+}
+
+footer ul li {
+    display: inline;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    padding-left: 15px;
+}
+
+footer ul li:first-child {
+    padding-left: 0;
+}
+
+footer ul li a {
+    color: rgba(0, 0, 0, .54);
+    text-decoration: none;
+}
+
+footer .sub-navigation .terms {
+    position: relative;
+    left: 71%;
+}
+
+/**************************************************** 2. footer ****************************************************/
