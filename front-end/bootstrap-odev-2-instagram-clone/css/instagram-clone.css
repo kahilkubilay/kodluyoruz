@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*********************************** navbar-start ***********************************/
+.nav-fixed {
+    z-index: 2;
+    top: 0;
+}
+
+.nav-search-box {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    height: 100%;
+}
+
+.search-tools {
+    position: absolute;
+    margin-left: 150px;
+} 
+
+input[type=search] {
+    width: 215px;
+    height: 28px;
+    padding: 0;
+    margin: 0;
+}
+
+input[type=search]::placeholder {
+    color: rgba(var(--f52,142,142,142),1);
+    font-size: 14px;
+}
+
+input[type=search]:focus {
+    border: 1px solid #ced4da;
+}
+
+li {
+    list-style-type: none;
+}
+
+.search-box {
+    width: 215px;
+    min-width: 125px;
+    height: 28px;
+}
+/*********************************** navbar-end ***********************************/
+
+/*********************************** content-start ***********************************/
+section.content {
+    margin-top: 33px;
+}
+
+@media screen and (max-width: 720px) {
+    section.content {
+        margin-top: 0;
+    }
+}
+
+/*********************************** content-end ***********************************/
+
+/*********************************** stories-start ***********************************/
+@media screen and (min-width: 960px) {
+    .stories-capsule {
+        margin-right: 38px;
+    }
+}
+
+.stories-content {
+    position: relative;
+    top: 53px;
+    z-index: 1;
+}
+
+.story-block {
+    margin: 20px 9px;
+}
+
+.image-gradiend-wrap {
+    background: linear-gradient(45deg, orange,red);
+    border-radius: 100%;
+    padding: 2px;
+    width: 60px;
+    height: 60px;
+}
+
+.story-image {
+    width: 56px;
+    height: 56px;
+    padding: 2px;
+    background-color: white;
+}
+
+.story-capsule span {
+    display: block;
+    color: #000;
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: .01em;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+/*********************************** stories-end ***********************************/
+
+/*********************************** posted-start ***********************************/
+.post.first {
+    margin-top: 78px;
+}
+
+@media screen and (max-width: 720px) {
+    .post.first {
+        margin-top: 50px;
+    }
+}
+
+.post div[class*=col-] {
+    z-index: 1;
+}
+
+.posted-image {
+    border-radius: 0;
+}
+
+.post-title, .likes a {
+    color: #262626;
+    font-weight: bold;
+}
+
+.post-title a {
+    color: #262626;
+    font-size: 14px;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+.post-card {
+    width: 100%;
+}
+
+@media screen and (min-width: 1140px) {
+    .post-card {
+        width: 94.4%;
+    }
+}
+
+.likes a {
+    font-size: 16px;
+}
+
+.user-comment-name {
+    float: left;
+}
+
+.user-comment {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.time {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #8e8e8e;
+    line-height: 18px;
+    letter-spacing: .2px;
+}
+/*********************************** posted-end ***********************************/
+/*********************************** content-end ***********************************/
+
+/*********************************** recommended-start ***********************************/
+.recommended {
+ 
+}
+
+@media screen and (max-width: 985) {
+    .recommended {
+        display: none;
+    }
+}
+
+.recommended .title {
+    font-weight: 600;
+    color: #262626;
+    font-size: 14px;
+    display: block;
+}
+
+.recommended .first-col {
+    margin-right: 157px!important;
+}
+
+.recommended span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    display: block;
+}
+
+.advice-followers {
+    font-size: 10px!important;
+    line-height: 12px;
+}
+
+.follow-buttons {
+    font-size: 13px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.follow-buttons-blue {
+    color: #0095f6;
+}
+
+.advace-info {
+    font-size: 12px;
+}
+
+.user-img-first, .user-img {
+    width: 60px;
+    margin: 0; 
+    padding: 0;
+}
+
+.user-img {
+    width: 30px;
+    height: 30px;
+}
+
+.user-img-capsule {
+    padding: 0!important;
+}
+
+
+/*********************************** recommended-end ***********************************/
