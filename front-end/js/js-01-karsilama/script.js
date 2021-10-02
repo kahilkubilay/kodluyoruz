@@ -1,4 +1,4 @@
-let user = prompt('İsminizi bahşeder misiniz');
+let user = prompt('İsminizi bahşeder misiniz') || 'gizemli';
 let date = new Date();
 let utcDay = date.getDay();
 let day;
