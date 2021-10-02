@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #343a40;
+}
+
+h1 {
+    color: #e98208;
+    font-size: 36px;
+}
+
+header {
+    margin-top: 8%;
+}
+
+header, section{
+    text-align: center;
+}
+
+section article {
+    display: block;
+}
