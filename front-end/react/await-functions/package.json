@@ -1,0 +1,19 @@
+{
+    "name": "bolum-sonu-alistirmasi",
+    "version": "1.0.0",
+    "description": "Asenkron yapilarda bulunan modullerin cagirilarak islem yapabilmesi",
+    "main": "app.js",
+    "scripts": {
+        "test": "node app"
+    },
+    "keywords": [
+        "async",
+        "await"
+    ],
+    "type": "module",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.24.0"
+    }
+}
