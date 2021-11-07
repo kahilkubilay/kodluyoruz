@@ -1,12 +1,14 @@
 /************************************ card style component ************************************/
 .card {
-    border: 2px dashed purple;
     text-align: center;
 }
 
 li {
     list-style: none;
     font-size: 50px;
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
 }
 
 input {
@@ -14,6 +16,38 @@ input {
     height: 50px!important;
     font-size: 30px;
     text-align: center;
+}
+
+.check {
+    border: 2px solid black;
+}
+
+.check, .remove {
+   border-radius: 30px;
+   width: 35px;
+   height: 35px;
+   margin: 0 15px;
+}
+
+.check .task-done-circle {
+    color: green;
+}
+
+.task-remove {
+    color: royalblue;
+    padding: 5px 10px;
+}
+
+li:hover .task-remove {
+    opacity: 1;
+}
+
+.fontAwesome {
+    font-size: 30px;
+}
+
+.fontAwesome:hover {
+    cursor: pointer;
 }
 
 /************************************ card style component ************************************/

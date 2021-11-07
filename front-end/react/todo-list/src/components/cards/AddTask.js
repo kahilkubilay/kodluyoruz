@@ -1,22 +1,21 @@
 import { useState, useEffect } from 'react'
 
 function AddTask({ addTasks, tasks }) {
-    const [todo, setTodo] = useState({task: '', status: '', order: 0});
+    const [todo, setTodo] = useState({task: '', status: '', order: 0})
 
     useEffect(() => {
-        setTodo(todo);
+        setTodo(todo)
     }, [todo])
 
     const onChangeTask = (e) => {
-        setTodo({ ...todo, task: e.target.value, status: false, order: tasks.length + 1});
+        setTodo({ ...todo, task: e.target.value, status: true, order: tasks.length + 1})
     }
 
     const onSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
-        addTasks([...tasks, todo]);
+        addTasks([...tasks, todo])
     }
-
 
     return (
         <form onSubmit={ onSubmit }>

@@ -7,19 +7,19 @@ function Card() {
     const [todos, setTodos] = useState([
         {
             task: 'clear the table',
-            status: false,
+            status: true,
             order: 1
         }, {
             task: 'love the cats',
-            status: true,
+            status: false,
             order: 2,
         }, {
             task: 'do it homeworks',
-            status: false,
+            status: true,
             order: 3,
         }, {
             task: 'listen to music',
-            status: true,
+            status: false,
             order: 4
         }
     ]);
