@@ -22,7 +22,7 @@ function Form({ addContacts, contacts }) {
         if(form.fullName === '' || form.phoneNumber === '') {
             return false;
         }
-
+        
         addContacts([...contacts,form]);
     }
     

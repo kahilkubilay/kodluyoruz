@@ -22,10 +22,10 @@ function List({ contacts }) {
                 {
                     filtered.map((contact, index) => (
                         <li key={ index }>
-                            <span>{ contact.fullName}</span>
+                            <span>{ contact.fullName}</span> 
                             <span>{ contact.phoneNumber }</span>
                         </li>
-                        ))
+                    ))
                 }
             </ul>
 

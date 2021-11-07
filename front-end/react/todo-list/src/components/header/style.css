@@ -1,0 +1,13 @@
+/************************************ header style component ************************************/
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header h2 {
+    font-size: 100px;
+    color: rgba(175, 47, 47, 0.15);
+    font-weight: 400;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/************************************ header style component ************************************/
