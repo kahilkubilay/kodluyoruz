@@ -1,7 +1,4 @@
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons'
-
 
 function List({ tasks, editTasks }) {
     const [todo, setTodo] = useState({task: '', status: ''});
@@ -11,9 +8,7 @@ function List({ tasks, editTasks }) {
     }, [todo])
 
     const removeTask = (e) => {
-        let removedTaskOrder = parseInt(e.target.attributes[0].value);
-        console.log(e);
-        console.log(e.target);
+        let removedTaskOrder = parseInt(e.target.attributes.order.value);
 
         const otherTask = tasks.filter(item => item.order !== removedTaskOrder);
 
@@ -21,20 +16,18 @@ function List({ tasks, editTasks }) {
     }
 
     const setStatus = (e) => {
-        console.log(e);
-
-        let updateTaskOrder = parseInt(e.target.attributes[0].value);
+        let updateTaskOrder = parseInt(e.target.value);
         let updateTasks = [];
 
-        tasks.map(item => {
+        tasks.forEach(item => {
             if(item.order === updateTaskOrder) {
                 item.status = !item.status;
             }
 
-            updateTasks.push(item);
+            updateTasks.push(item)
         })
 
-        editTasks(updateTasks);
+        editTasks(updateTasks)
     }
 
     const listTask = tasks.map((item, index) => {
@@ -43,34 +36,12 @@ function List({ tasks, editTasks }) {
         let order = item.order;
         
         return <li key={ index }>
-                {/* <FontAwesomeIcon icon={faCoffee} />  */}
-                {/* <FontAwesomeIcon icon={ faCheckCircle } onClick={ setStatus } order={ item.order } />
-                {!status ? <span>{ task }</span> : <del> {task}</del>}
-                <button onClick={ removeTask } order={ order }> Removed </button> */}
-
-                {status ? 
-                    <div className="done">
-                        <button className="check" onClick={ setStatus }>
-                            <FontAwesomeIcon icon={ faCheck } className="task-done-circle fontAwesome"/>
-                        </button>
-                        <del>{ task }</del>
-                        {/* <FontAwesomeIcon icon={ faTrash } className="task-remove fontAwesome"/> */}
-                    </div> 
-                    : 
-                    <div className="waiting">
-                        <button className="check">
-                            {/* <FontAwesomeIcon icon={ faCheck } className="task-done-circle fontAwesome"/> */}
-                        </button>
-
-                        <span>{ task }</span>
-                       
-                    </div> 
-                }
-
-                <div className="remove" order={ 'ANAN' } onClick={ removeTask } value='ANAN'>
-                    <FontAwesomeIcon icon={ faTrash } className="task-remove fontAwesome" order='ANAN'/>
-                </div>
-
+                <div>
+                    <input name='isDone' type='checkbox' defaultChecked={status ? 'checked': ''} value={ order } 
+                        onClick={ setStatus }/>
+                    <span>{ status ? task : <del>{ task }</del> }</span>
+                </div> 
+                <div className='task-remove' order={ order } onClick={ removeTask }></div>
             </li>
     })
 

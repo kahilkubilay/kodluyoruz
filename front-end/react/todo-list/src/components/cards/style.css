@@ -11,15 +11,18 @@ li {
     vertical-align: center;
 }
 
-input {
+input[name=isDone] {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+input[name=todo] {
     width: 400px;
     height: 50px!important;
     font-size: 30px;
     text-align: center;
-}
-
-.check {
-    border: 2px solid black;
 }
 
 .check, .remove {
@@ -29,25 +32,29 @@ input {
    margin: 0 15px;
 }
 
-.check .task-done-circle {
-    color: green;
-}
-
 .task-remove {
-    color: royalblue;
-    padding: 5px 10px;
+    padding: 0px 8px;
+    cursor: pointer;
+    opacity: 0;
+    color: red;
 }
 
-li:hover .task-remove {
+div.task-remove:after {
+    content: '×';
+}
+
+
+li:hover .task-remove, li:hover input[name=isDone] {
     opacity: 1;
-}
-
-.fontAwesome {
-    font-size: 30px;
 }
 
 .fontAwesome:hover {
     cursor: pointer;
 }
+
+del {
+    opacity: .5;
+}
+
 
 /************************************ card style component ************************************/

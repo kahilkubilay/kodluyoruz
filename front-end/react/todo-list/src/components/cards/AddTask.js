@@ -15,6 +15,7 @@ function AddTask({ addTasks, tasks }) {
         e.preventDefault()
 
         addTasks([...tasks, todo])
+        e.target.children[0].value = '';
     }
 
     return (
