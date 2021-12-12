@@ -1,18 +1,19 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useState, useContext } from "react"
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
     const [weather, setWeather] = useState({
-        location: 'Ankara',
-        deg: '1deg'
-    });
+        name: '',
+        lon: '',
+        lang: ''
+    })
 
-    const data = {weather, setWeather};
+    const data = {weather, setWeather}
 
     return <ThemeContext.Provider value={ data }> 
         { children }
     </ThemeContext.Provider>
 }
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => useContext(ThemeContext)
