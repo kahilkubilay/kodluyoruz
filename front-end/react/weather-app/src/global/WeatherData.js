@@ -4,9 +4,9 @@ export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
     const [weather, setWeather] = useState({
-        name: '',
-        lon: '',
-        lang: ''
+        name: 'Ankara',
+        lon: '39.92553',
+        lang: '32.86628'
     })
 
     const data = {weather, setWeather}

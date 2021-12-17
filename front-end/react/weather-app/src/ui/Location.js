@@ -37,11 +37,10 @@ function Location() {
 
     return (
         <div className="location">
-            <img src={logo} alt="Logo" className="logo"/>
-            
-            <select name="cities" id="citiesOfTurkey" onChange={changeLocation}>
-                { data }
-            </select>
+                <div className="title">Weekly Weather Forecast</div>
+                    <select name="cities" id="citiesOfTurkey" onChange={changeLocation}>
+                    { data }
+                </select>
         </div>
     )
 }

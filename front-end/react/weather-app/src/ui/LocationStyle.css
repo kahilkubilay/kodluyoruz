@@ -1,16 +1,31 @@
+
 .location {
     display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    align-items: center;
 }
 
-img.logo {
-    width: 100px;
-    margin: 50px;
-    background-color: red;
-    height: 100px;
+.location > .title {
+    padding: 3px;
+    margin-bottom: 50px;
 }
 
 select {
-    width: 100px;
-    height: 50px;
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+.location div:first-child {
+    text-decoration: underline;
 }
 

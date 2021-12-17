@@ -1,5 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Nunito');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #f5c765;
+}
+
+.location > .title {
+    font-family: 'Libre Baskerville', Serif;
+    font-size: 46px;
+}
+
+.daily li, .today-info {
+    font-family: 'Nunito', Sans-Serif;
+    font-size: 16px;
+}
+
+.today-info {
+    font-size: 50px;
+    font-weight: 100;
 }
