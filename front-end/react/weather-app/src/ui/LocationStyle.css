@@ -1,8 +1,8 @@
-
+/*location info styles*/
 .location {
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 0 0 50px 0;
     align-items: center;
 }
 
@@ -25,7 +25,10 @@ select {
     background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
-.location div:first-child {
-    text-decoration: underline;
+.location div .logo {
+    width: 100px;
+    position: relative;
+    top: 31px;
+    left: 22px
 }
-
+/*location info styles*/

@@ -1,7 +1,4 @@
-img {
-  
-}
-
+/* weather component styles */
 ul.daily {
   display: flex;
   flex-wrap: wrap;
@@ -18,10 +15,6 @@ ul.daily {
   margin: 8px;
   border-radius: 15px;
   list-style-type: none;
-}
-
-.daily li .day {
-  text-decoration: underline;
 }
 
 .daily li .deg, .today-info-capsule .today-deg {
@@ -50,4 +43,6 @@ ul.daily {
 
 .today img {
   width: 200px;
+  height: 200px;
 }
+/* weather component styles */

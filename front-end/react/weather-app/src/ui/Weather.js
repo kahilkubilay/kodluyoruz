@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './weatherStyle.css';
 import { useTheme } from '../global/WeatherData';
-import { useContext } from 'react';
-import images from '../assets/images/weather/app-cloudy.svg'
-// require('dotenv').config();
+import { Icons } from '../components/SetIcon';
 
 function Weather() {
     const { weather } = useTheme({
@@ -16,7 +14,10 @@ function Weather() {
     const [lang, setLang] = useState(weather.lang);
     const [data, setData] = useState([]);
     const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    const todayDate = new Date().getDay();
     const key = process.env.REACT_APP_API_KEY;
+    let todayIcon = '';
+    let todayDeg = '';
 
     useEffect(() => {
         setLon(weather.lon)
@@ -42,18 +43,27 @@ function Weather() {
         })
       }
       fetchData();
-    }, [lang, lon])
+    }, [lang, lon, key])
 
     return (
         <>
           <ul className='daily'>
             {
               data.map((daily, index) => {
+                let description = ((daily.weather || [])[0] || {}).description || ''
+                let icon = Icons[description.replace(/\s/g, '_')]
+                let deg = parseInt((daily.temp || {}).day || 0)
+
+                if(new Date(daily.dt * 1000).getDay() === todayDate) {
+                  todayIcon = icon
+                  todayDeg = deg
+                }
+
                 return <li key={index}>
-                  <img src={ images } alt="test" />
+                  <img src={ icon } alt="test" />
                   <div className='day'>{ days[new Date(daily.dt * 1000).getDay()] }</div>
-                  <div className='deg'>{ parseInt((daily.temp || {}).day || 0)} &#8451;</div>
-                  <div className='title'>{ ((daily.weather || [])[0] || {}).description || '' }</div>
+                  <div className='deg'>{ deg } &#8451;</div>
+                  <div className='description'>{ description }</div>
                 </li>
                 })
             }
@@ -63,13 +73,12 @@ function Weather() {
             <div className='today-info-capsule'>
             <h6 className='today-info'>{ (weather.name || '')[0].toUpperCase() + (weather.name || '').slice(1)} Today
               </h6>
-              <div className='today-day'>Tuesday</div>
-              <div className='today-deg'>12 &#8451;</div>
+              <div className='today-day'>{ days[todayDate] }</div>
+              <div className='today-deg'>{ todayDeg } &#8451;</div>
             </div>
-            <img src={ images } alt="test" />
+            <img src={ todayIcon } alt="test" />
           </div>
         </>
-        
     )
 }
 

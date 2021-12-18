@@ -1,3 +1,4 @@
+/* default styles */
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Nunito');
 
 * {
@@ -25,3 +26,4 @@ body {
     font-size: 50px;
     font-weight: 100;
 }
+/* default styles */

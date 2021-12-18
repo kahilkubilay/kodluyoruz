@@ -1,13 +1,11 @@
 import React from 'react'
-import logo from '../assets/images/weather-fake-logo.png'
 import './LocationStyle.css'
 import { Cities } from '../global/CitiesOfTurkey'
 import { useTheme } from '../global/WeatherData'
-import { useContext, useState, useEffect } from 'react';
-import { ThemeContext } from '../global/WeatherData'
+import { Logo } from '../components/SetIcon';
 
 function Location() {
-    const { weather, setWeather } = useTheme({
+    const { setWeather } = useTheme({
         name: '',
         lon: '',
         lang: ''
@@ -37,8 +35,10 @@ function Location() {
 
     return (
         <div className="location">
-                <div className="title">Weekly Weather Forecast</div>
-                    <select name="cities" id="citiesOfTurkey" onChange={changeLocation}>
+                <div className="title">Weekly Weather Forecast <img src={ Logo } alt="weekly weather forecast logo" 
+                    className="logo"/></div>
+
+                <select name="cities" id="citiesOfTurkey" onChange={changeLocation}>
                     { data }
                 </select>
         </div>
