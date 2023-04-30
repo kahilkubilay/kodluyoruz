@@ -39,13 +39,14 @@ const UpdateData = (name, data) => {
     fs.writeFile(name, data, 'utf8', cb)
 }
 
+/**
+ * 
+ * @param {string} name 
+ */
+
 const DeleteFile = (name) => {
     fs.unlink(name, cb)
 }
-
-
-
-
 
 export {
     CreateFile,
@@ -53,4 +54,3 @@ export {
     UpdateData,
     DeleteFile
 }
-
